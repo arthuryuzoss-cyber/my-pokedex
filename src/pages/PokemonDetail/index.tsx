@@ -126,6 +126,7 @@ export default function PokemonDetailScreen() {
 
 
   useEffect(() => {
+    console.log('Abrindo pokémon', id);
     const controller = new AbortController();
 
     async function loadPokemon() {
@@ -190,7 +191,6 @@ export default function PokemonDetailScreen() {
           {error ?? 'Erro inesperado na simulação.'}
         </Text>
         <TouchableOpacity
-          //onPress={() => navigation.goBack()}
           style={{
             paddingHorizontal: 16,
             paddingVertical: 10,
